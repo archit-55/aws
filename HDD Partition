@@ -23,7 +23,7 @@ mkfs.xfs disk name
 mkfs.xfs /dev/xvdf1
 
 to check which formats are supoorted for formatting 
-mkfs.(double tab) 
+mkfs.(press double tab) 
 
 Step3 ------ Mounting a HDD
 Mounting is the attaching of an additional filesystem to the currently accessible filesystem of a computer. 
@@ -31,9 +31,9 @@ A filesystem is a hierarchy of directories (also referred to as a directory tree
 or storage media (e.g., a CDROM or floppy disk)
 
 First make dir in which we have to mount the HDD 
-mkdir /mnt/newvolume
+mkdir /mnt/newvolumename
 now Mount the HDD
-mount   /dev/xvdf1    /mnt/newvolume
+mount   /dev/xvdf1    /mnt/newvolumename
 this will mount the HDD into newvolume dir
 To get the dir or place where the HDD is mounted 
 df -hT
@@ -44,7 +44,8 @@ again and have to repeat the mounting process again but only mounting process.
 To save the mounting permanently 
 vim /etc/fstab 
 write 
-HDD name and mounted place and add xfs  
+HDD name and mounted place and add xfs 
+like for example:
 /dev/xvdf1  /mnt/newvolume  xfs
 :wq
 
